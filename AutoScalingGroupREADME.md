@@ -1,5 +1,10 @@
-AUTO-SCALING GROUP CONFIGURATIONS WITH LOAD BALANCER AND TARGET GROUP
-The autoscaling group are the collection of Amazon EC2 instances that enables scaling to enable high availability and performance of our applications Below are the steps to creating an auto-scaling group. Step 1: Navigate to the Amazon EC2 Auto Scaling and click the “Create Auto Scaling group” button and input the ASG details and create a launch template.
+### AUTO-SCALING GROUP CONFIGURATIONS WITH LOAD BALANCER AND TARGET GROUP
+
+
+The autoscaling group are the collection of Amazon EC2 instances that enables scaling to enable high availability and performance of our applications 
+Below are the steps to creating an auto-scaling group. 
+
+Step 1: Navigate to the Amazon EC2 Auto Scaling and click the “Create Auto Scaling group” button and input the ASG details and create a launch template.
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/e26a37f9-4705-43fe-acfa-9118a8e72ce8)
 
@@ -55,7 +60,8 @@ Click next and navigate to the load-balancing section
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/12548099-d162-44c3-aaf2-b26af08408ab)
 
 
-Attach the new load balancer and select the application load balancer because we are using our HTTP and HTTPS Give the load balancer a name and make sure it is internet-facing because we want to ensure our clients are able to access it.
+Attach the new load balancer and select the application load balancer because we are using our HTTP and HTTPS 
+Give the load balancer a name and make sure it is internet-facing because we want to ensure our clients are able to access it.
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/d3fe4520-f8df-4715-af64-01103aa3b75a)
 
@@ -70,12 +76,14 @@ Once created select the new target group
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/2e9a5fc3-b3de-42cd-bbc7-34fc55843edd)
 
-Take note of the health check grace period which was set to default 300 seconds .This is the time it takes for the instance to initialize .Click next to proceed .
+Take note of the health check grace period which was set to default 300 seconds .
+This is the time it takes for the instance to initialize .Click next to proceed .
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/22bbf9e5-c03d-4ede-aecf-31129d27676f)
 
 
-We would need to configure the ASG poilicies . In this case our desired and minimum capacity would be set at 3 and maximum capacity would be set at 7
+We would need to configure the ASG poilicies . 
+In this case our desired and minimum capacity would be set at 3 and maximum capacity would be set at 7
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/54973f26-82f4-41a3-b516-475c22391fe1)
 
@@ -88,7 +96,8 @@ Skip SNS notification and tags options
 
 
 
-Click to create “Auto scaling group” button. Observe it is updating and creating our new instance and can be seen when you check the EC2 instance page as shown below
+Click to create “Auto scaling group” button.
+Observe it is updating and creating our new instance and can be seen when you check the EC2 instance page as shown below
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/59395a31-e11a-4216-9342-3c4dbaf67c31)
 
@@ -145,7 +154,8 @@ Check the load balancer if working as expected
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/2fe4d720-a050-48c6-a47a-57c2fa5ab614)
 
 
-Having confirmed this . Check the security group of the Load balancer to confirm if it is working with the one we assigned to the ASG and change it to the correct one
+Having confirmed this . 
+Check the security group of the Load balancer to confirm if it is working with the one we assigned to the ASG and change it to the correct one
 
 ![image](https://github.com/eyewande2022/auto-scaling-group/assets/116227096/e28f3381-cbb1-45fe-b0e4-2770639210d9)
 
